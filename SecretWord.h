@@ -18,6 +18,8 @@ public:
 			vHint.push_back("");
 			vHint[i] = config::GetNextText(sHints, startPos, "HINT");
 		}
+		if(vHint[nHINTS - 1].find("WORD") != std::string::npos) vHint[nHINTS - 1].resize(vHint[nHINTS - 1].find("WORD"));
+
 	}
 
 	bool IsCorrectAnswer(std::string answer) {
